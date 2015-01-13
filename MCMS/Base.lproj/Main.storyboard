@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="153" width="320" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pBx-qJ-Hde">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCellID" id="pBx-qJ-Hde">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pBx-qJ-Hde" id="ht3-JN-LQU">
@@ -28,18 +28,43 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Lql-1F-bpw"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="nef-81-pqf"/>
+                                </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Creature Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Eq-Y4-FgG">
+                                <rect key="frame" x="16" y="92" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Creature Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gf2-iF-aaS">
+                                <rect key="frame" x="16" y="135" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPa-m6-T9S">
+                                <rect key="frame" x="258" y="115" width="46" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FzV-HV-5Ot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EYh-Py-SEI"/>
                     <connections>
+                        <outlet property="creatureDetailsTextField" destination="Gf2-iF-aaS" id="MEh-n4-pA3"/>
+                        <outlet property="creatureNameTextField" destination="8Eq-Y4-FgG" id="SzK-yi-EIi"/>
                         <outlet property="tableView" destination="cwB-Xb-j6V" id="Zor-t3-KYv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="1004"/>
+            <point key="canvasLocation" x="620" y="1004"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Fo-0c-G1h">

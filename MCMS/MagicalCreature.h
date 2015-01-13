@@ -14,5 +14,6 @@
 @property NSString *detail;
 @property NSMutableArray *accessories;
 //@property UIImage *creaturePicture;
+-(instancetype) initWithName:(NSString *) name;
 
 @end

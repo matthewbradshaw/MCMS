@@ -10,4 +10,14 @@
 
 @implementation MagicalCreature
 
+-(instancetype) initWithName:(NSString *) name {
+    self = [super init];
+    self.name = name;
+    return self;
+}
+
+-(NSString *)description {
+    return [NSString stringWithFormat:@"Magical Creature: %@", self.name];
+}
+
 @end
