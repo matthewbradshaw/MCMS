@@ -1,5 +1,6 @@
 //
 //  ViewController.h
+// RootViewController.h
 //  MCMS
 //
 //  Created by Matthew Bradshaw on 1/13/15.
@@ -7,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CreatureViewController.h"
 
 @interface RootViewController : UIViewController
 

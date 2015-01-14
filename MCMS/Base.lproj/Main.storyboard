@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Magical Creatures-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
@@ -20,12 +20,15 @@
                                 <rect key="frame" x="0.0" y="153" width="320" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCellID" id="pBx-qJ-Hde">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyCellID" id="pBx-qJ-Hde">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pBx-qJ-Hde" id="ht3-JN-LQU">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MVM-Pv-sQe" kind="push" identifier=" ShowCreatureSegue" id="Gl2-wW-2IM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -55,7 +58,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EYh-Py-SEI"/>
+                    <navigationItem key="navigationItem" title="My Magical Creatures" id="EYh-Py-SEI"/>
                     <connections>
                         <outlet property="creatureDetailsTextField" destination="Gf2-iF-aaS" id="MEh-n4-pA3"/>
                         <outlet property="creatureNameTextField" destination="8Eq-Y4-FgG" id="SzK-yi-EIi"/>
@@ -64,7 +67,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="1004"/>
+            <point key="canvasLocation" x="496" y="1004"/>
+        </scene>
+        <!--Creature View Controller-->
+        <scene sceneID="v4i-64-LK9">
+            <objects>
+                <viewController id="MVM-Pv-sQe" customClass="CreatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q9e-2c-tNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOT-3O-edi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lmk-fQ-lLs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbp-Hx-lx9">
+                                <rect key="frame" x="70" y="112" width="181" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u7V-aN-bcG"/>
+                    <connections>
+                        <outlet property="myNameLabel" destination="fbp-Hx-lx9" id="rsH-JC-733"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNK-l7-aP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="1004"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Fo-0c-G1h">

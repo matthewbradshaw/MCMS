@@ -1,5 +1,6 @@
 //
 //  ViewController.m
+//  RootViewController.m
 //  MCMS
 //
 //  Created by Matthew Bradshaw on 1/13/15.
@@ -8,12 +9,14 @@
 
 #import "RootViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *creatureNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *creatureDetailsTextField;
-
+@property NSString *currentCreatureName;
+@property NSIndexPath *currentIndexPath;
 
 
 
@@ -51,6 +54,19 @@
 
     }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    NSLog(@"Iself.tableView.indexPathForSelectedRow PFS %ld", (long)self.tableView.indexPathForSelectedRow);
+
+    NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+    CreatureViewController *detailVC = segue.destinationViewController;
+    MagicalCreature *creatureTapped = [self.creatures objectAtIndex:selectedIndexPath.row];
+    detailVC.creature = creatureTapped;
+
+    //detailVC.title = [self.creatures objectAtIndex:self.currentIndexPath.row];
+
+}
+
 
 #pragma mark TableView Activities
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -62,15 +78,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-
     MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
-
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCellID" forIndexPath:indexPath];
+   NSLog(@"IPR CRAIP %ld", (long)indexPath.row);
 
-//    NSLog(@"%d", indexPath.row);
-
-
-    cell.textLabel.text = creature.name;
+   cell.textLabel.text = creature.name;
+//Nice try matt, wrong name
+    //    self.currentCreatureName = cell.textLabel.text;
 
     return cell;
 }

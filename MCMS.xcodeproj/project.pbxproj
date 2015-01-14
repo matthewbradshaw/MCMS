@@ -15,6 +15,7 @@
 		DD95083A1A65B5E600C3E7B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9508381A65B5E600C3E7B7 /* LaunchScreen.xib */; };
 		DD9508461A65B5E600C3E7B7 /* MCMSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9508451A65B5E600C3E7B7 /* MCMSTests.m */; };
 		DD9508511A65B76F00C3E7B7 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9508501A65B76F00C3E7B7 /* MagicalCreature.m */; };
+		DD9508541A65EB1D00C3E7B7 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9508531A65EB1D00C3E7B7 /* CreatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		DD9508451A65B5E600C3E7B7 /* MCMSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMSTests.m; sourceTree = "<group>"; };
 		DD95084F1A65B76F00C3E7B7 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
 		DD9508501A65B76F00C3E7B7 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
+		DD9508521A65EB1D00C3E7B7 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		DD9508531A65EB1D00C3E7B7 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				DD95084F1A65B76F00C3E7B7 /* MagicalCreature.h */,
 				DD9508501A65B76F00C3E7B7 /* MagicalCreature.m */,
 				DD9508331A65B5E600C3E7B7 /* Main.storyboard */,
+				DD9508521A65EB1D00C3E7B7 /* CreatureViewController.h */,
+				DD9508531A65EB1D00C3E7B7 /* CreatureViewController.m */,
 				DD9508361A65B5E600C3E7B7 /* Images.xcassets */,
 				DD9508381A65B5E600C3E7B7 /* LaunchScreen.xib */,
 				DD9508291A65B5E600C3E7B7 /* Supporting Files */,
@@ -227,6 +232,7 @@
 				DD9508321A65B5E600C3E7B7 /* RootViewController.m in Sources */,
 				DD95082F1A65B5E600C3E7B7 /* AppDelegate.m in Sources */,
 				DD95082C1A65B5E600C3E7B7 /* main.m in Sources */,
+				DD9508541A65EB1D00C3E7B7 /* CreatureViewController.m in Sources */,
 				DD9508511A65B76F00C3E7B7 /* MagicalCreature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
